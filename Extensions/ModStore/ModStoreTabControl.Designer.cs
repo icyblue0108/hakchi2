@@ -43,21 +43,11 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.moduleListView, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelReadme, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(752, 414);
-            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -65,90 +55,62 @@
             this.panel1.Controls.Add(this.moduleDownloadButton);
             this.panel1.Controls.Add(this.moduleDownloadInstallButton);
             this.panel1.Controls.Add(this.modInfo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(185, 3);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 388);
-            this.panel1.TabIndex = 0;
             // 
             // moduleDownloadButton
             // 
-            this.moduleDownloadButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.moduleDownloadButton.Enabled = false;
-            this.moduleDownloadButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.moduleDownloadButton.Location = new System.Drawing.Point(0, 294);
+            resources.ApplyResources(this.moduleDownloadButton, "moduleDownloadButton");
             this.moduleDownloadButton.Name = "moduleDownloadButton";
-            this.moduleDownloadButton.Size = new System.Drawing.Size(204, 46);
-            this.moduleDownloadButton.TabIndex = 9;
-            this.moduleDownloadButton.Text = "Download Module";
             this.moduleDownloadButton.UseVisualStyleBackColor = true;
             this.moduleDownloadButton.Click += new System.EventHandler(this.moduleDownloadButton_Click);
             // 
             // moduleDownloadInstallButton
             // 
-            this.moduleDownloadInstallButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.moduleDownloadInstallButton.Enabled = false;
-            this.moduleDownloadInstallButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.moduleDownloadInstallButton.Location = new System.Drawing.Point(0, 340);
+            resources.ApplyResources(this.moduleDownloadInstallButton, "moduleDownloadInstallButton");
             this.moduleDownloadInstallButton.Name = "moduleDownloadInstallButton";
-            this.moduleDownloadInstallButton.Size = new System.Drawing.Size(204, 46);
-            this.moduleDownloadInstallButton.TabIndex = 8;
-            this.moduleDownloadInstallButton.Text = "Download and Install Module";
             this.moduleDownloadInstallButton.UseVisualStyleBackColor = true;
             this.moduleDownloadInstallButton.Click += new System.EventHandler(this.moduleDownloadInstallButton_Click);
             // 
             // modInfo
             // 
-            this.modInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.modInfo, "modInfo");
             this.modInfo.Author = null;
             this.modInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(0)))), ((int)(((byte)(20)))));
             this.modInfo.infoStrips = ((System.Drawing.Bitmap)(resources.GetObject("modInfo.infoStrips")));
             this.modInfo.InstalledVersion = null;
             this.modInfo.LatestVersion = null;
-            this.modInfo.Location = new System.Drawing.Point(-1, 0);
             this.modInfo.ModuleName = null;
             this.modInfo.Name = "modInfo";
-            this.modInfo.Size = new System.Drawing.Size(206, 387);
-            this.modInfo.TabIndex = 4;
             this.modInfo.textColor = System.Drawing.Color.White;
             // 
             // moduleListView
             // 
             this.moduleListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.moduleListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.moduleListView, "moduleListView");
             this.moduleListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.moduleListView.Location = new System.Drawing.Point(3, 3);
             this.moduleListView.MultiSelect = false;
             this.moduleListView.Name = "moduleListView";
-            this.moduleListView.Size = new System.Drawing.Size(176, 388);
-            this.moduleListView.TabIndex = 3;
             this.moduleListView.UseCompatibleStateImageBehavior = false;
             this.moduleListView.View = System.Windows.Forms.View.Details;
             this.moduleListView.SelectedIndexChanged += new System.EventHandler(this.moduleListView_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "";
-            this.columnHeader1.Width = 150;
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
             // 
             // panelReadme
             // 
-            this.panelReadme.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelReadme.Location = new System.Drawing.Point(397, 3);
+            resources.ApplyResources(this.panelReadme, "panelReadme");
             this.panelReadme.Name = "panelReadme";
-            this.panelReadme.Size = new System.Drawing.Size(352, 388);
-            this.panelReadme.TabIndex = 4;
             // 
             // ModStoreTabControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ModStoreTabControl";
-            this.Size = new System.Drawing.Size(752, 414);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
