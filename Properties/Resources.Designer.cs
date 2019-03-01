@@ -1102,7 +1102,7 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export Games.
+        ///   Looks up a localized string similar to Export to USB.
         /// </summary>
         internal static string ExportGames {
             get {
@@ -2701,8 +2701,8 @@ namespace com.clusterrr.hakchi_gui.Properties {
         ///    &lt;head&gt;
         ///        &lt;style type=&quot;text/css&quot;&gt;{0}&lt;/style&gt;
         ///    &lt;/head&gt;
-        ///    &lt;body style=&quot;background-color: {3}&quot;&gt;
-        ///        &lt;div id=&quot;content&quot;&gt;&lt;h1 id=&quot;title&quot;&gt;{1}&lt;/h1&gt;{2}&lt;/div&gt;
+        ///    &lt;body style=&quot;background-color: {2}&quot;&gt;
+        ///        &lt;div id=&quot;content&quot;&gt;{1}&lt;/div&gt;
         ///    &lt;/body&gt;
         ///&lt;/html&gt;.
         /// </summary>
