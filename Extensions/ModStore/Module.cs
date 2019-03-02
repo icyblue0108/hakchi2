@@ -1,7 +1,5 @@
-﻿using System;
+﻿using com.clusterrr.hakchi_gui.Extensions.ModStore;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace com.clusterrr.hakchi_gui.module_library
 {
@@ -27,7 +25,7 @@ namespace com.clusterrr.hakchi_gui.module_library
 
         public override string Type
         {
-            get { return "Module"; }
+            get { return ModStoreResources.Module; }
         }
     }
 }

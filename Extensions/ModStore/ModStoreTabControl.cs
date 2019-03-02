@@ -8,6 +8,7 @@ using com.clusterrr.hakchi_gui.module_library;
 using System.Drawing;
 using System.Net;
 using com.clusterrr.hakchi_gui.Hmod.Controls;
+using com.clusterrr.hakchi_gui.Extensions.ModStore;
 
 namespace com.clusterrr.hakchi_gui
 {
@@ -60,21 +61,21 @@ namespace com.clusterrr.hakchi_gui
                 if (installedModule.Version != currentItem.Version)
                 {
                     moduleDownloadButton.Enabled = true;
-                    moduleDownloadButton.Text = "Update " + currentItem.Type;
-                    moduleDownloadInstallButton.Text = "Update and Install" + currentItem.Type;
+                    moduleDownloadButton.Text = string.Format(ModStoreResources.Update0, currentItem.Type);
+                    moduleDownloadInstallButton.Text = string.Format(ModStoreResources.UpdateAndInstall0, currentItem.Type);
                 }
                 else
                 {
                     moduleDownloadButton.Enabled = false;
-                    moduleDownloadButton.Text = currentItem.Type + " Up-To-Date";
-                    moduleDownloadInstallButton.Text = "Install " + currentItem.Type;
+                    moduleDownloadButton.Text = string.Format(ModStoreResources._0UpToDate, currentItem.Type);
+                    moduleDownloadInstallButton.Text = string.Format(ModStoreResources.Install0, currentItem.Type);
                 }
             }
             else
             {
                 moduleDownloadButton.Enabled = true;
-                moduleDownloadButton.Text = "Download " + currentItem.Type;
-                moduleDownloadInstallButton.Text = "Download and Install " + currentItem.Type;
+                moduleDownloadButton.Text = string.Format(ModStoreResources.Download0, currentItem.Type);
+                moduleDownloadInstallButton.Text = string.Format(ModStoreResources.DownloadAndInstall0, currentItem.Type);
             }
             moduleDownloadInstallButton.Enabled = true;
         }

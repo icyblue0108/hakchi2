@@ -61,12 +61,269 @@ namespace com.clusterrr.hakchi_gui.Extensions.ModStore {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Up-To-Date.
+        /// </summary>
+        internal static string _0UpToDate {
+            get {
+                return ResourceManager.GetString("_0UpToDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About {0}.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;TheOtherGuys&apos;.
+        /// </summary>
+        internal static string AboutCopyright {
+            get {
+                return ResourceManager.GetString("AboutCopyright", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author:.
+        /// </summary>
+        internal static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical error: {0}.
+        /// </summary>
+        internal static string CriticalError {
+            get {
+                return ResourceManager.GetString("CriticalError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://discord.gg/ETe3ecx.
+        /// </summary>
+        internal static string DiscordInvite {
+            get {
+                return ResourceManager.GetString("DiscordInvite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download {0}.
+        /// </summary>
+        internal static string Download0 {
+            get {
+                return ResourceManager.GetString("Download0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download and Install {0}.
+        /// </summary>
+        internal static string DownloadAndInstall0 {
+            get {
+                return ResourceManager.GetString("DownloadAndInstall0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finished updating items..
+        /// </summary>
+        internal static string FinishedUpdatingItems {
+            get {
+                return ResourceManager.GetString("FinishedUpdatingItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game.
+        /// </summary>
+        internal static string Game {
+            get {
+                return ResourceManager.GetString("Game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hakchi Mod Store.
+        /// </summary>
+        internal static string HakchiModStore {
+            get {
+                return ResourceManager.GetString("HakchiModStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hakchi Mod Store:
+        ///Developed by CompCom and Swingflip (&apos;TheOtherGuys&apos;)
+        ///Powered by www.hakchiresources.com
+        ///Exclusively for Hakchi2ce
+        ///
+        ///Special thanks to &apos;TheOtherGuys&apos;, &apos;TeamShinkansen&apos;, &apos;TeamHakchiResources&apos;.
+        /// </summary>
+        internal static string HakchiModStoreAboutDescription {
+            get {
+                return ResourceManager.GetString("HakchiModStoreAboutDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://hakchiresources.com.
+        /// </summary>
+        internal static string HakchiResourcesURL {
+            get {
+                return ResourceManager.GetString("HakchiResourcesURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap InfoStrips {
             get {
                 object obj = ResourceManager.GetObject("InfoStrips", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install {0}.
+        /// </summary>
+        internal static string Install0 {
+            get {
+                return ResourceManager.GetString("Install0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installed Version:.
+        /// </summary>
+        internal static string InstalledVersion {
+            get {
+                return ResourceManager.GetString("InstalledVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Latest Version:.
+        /// </summary>
+        internal static string LatestVersion {
+            get {
+                return ResourceManager.GetString("LatestVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://hakchiresources.com/modstorewelcome/?mode=welcome.
+        /// </summary>
+        internal static string ModStoreWelcomeURL {
+            get {
+                return ResourceManager.GetString("ModStoreWelcomeURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Module.
+        /// </summary>
+        internal static string Module {
+            get {
+                return ResourceManager.GetString("Module", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Module Name:.
+        /// </summary>
+        internal static string ModuleName {
+            get {
+                return ResourceManager.GetString("ModuleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        internal static string None {
+            get {
+                return ResourceManager.GetString("None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Powered By HakchiResources.com.
+        /// </summary>
+        internal static string PoweredByHakchiResourcesCom {
+            get {
+                return ResourceManager.GetString("PoweredByHakchiResourcesCom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RetroArch Core.
+        /// </summary>
+        internal static string RACore {
+            get {
+                return ResourceManager.GetString("RACore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refreshed Mod Store.
+        /// </summary>
+        internal static string RefreshedModStore {
+            get {
+                return ResourceManager.GetString("RefreshedModStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://hakchiresources.com/submit-mod/.
+        /// </summary>
+        internal static string SubmitModURL {
+            get {
+                return ResourceManager.GetString("SubmitModURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update {0}.
+        /// </summary>
+        internal static string Update0 {
+            get {
+                return ResourceManager.GetString("Update0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to update all out of date mod store items?.
+        /// </summary>
+        internal static string UpdateAllOutOfDateModStoreItemsQ {
+            get {
+                return ResourceManager.GetString("UpdateAllOutOfDateModStoreItemsQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update and Install {0}.
+        /// </summary>
+        internal static string UpdateAndInstall0 {
+            get {
+                return ResourceManager.GetString("UpdateAndInstall0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Items.
+        /// </summary>
+        internal static string UpdateItems {
+            get {
+                return ResourceManager.GetString("UpdateItems", resourceCulture);
             }
         }
     }

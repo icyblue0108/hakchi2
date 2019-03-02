@@ -329,6 +329,8 @@
     <EmbeddedResource Include="Extensions\ModStore\ModStoreAbout.resx">
       <DependentUpon>ModStoreAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\ModStore\ModStoreResources.de-DE.resx" />
+    <EmbeddedResource Include="Extensions\ModStore\ModStoreResources.fr-FR.resx" />
     <EmbeddedResource Include="Extensions\ModStore\ModStoreResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ModStoreResources.Designer.cs</LastGenOutput>

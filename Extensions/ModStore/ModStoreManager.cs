@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
-using System.Windows.Forms;
-using System.Xml.Serialization;
+﻿using com.clusterrr.hakchi_gui.Extensions.ModStore;
 using com.clusterrr.hakchi_gui.Properties;
 using com.clusterrr.hakchi_gui.Tasks;
 using SharpCompress.Archives;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace com.clusterrr.hakchi_gui.module_library
 {
@@ -53,14 +53,13 @@ namespace com.clusterrr.hakchi_gui.module_library
 
         public void DownloadItem(ModStoreItem item)
         {
-            switch(item.Type)
+            if(item.Type == ModStoreResources.Module)
             {
-                case "Module":
-                    DownloadModule(item as Module);
-                    break;
-                case "Game":
-                    DownloadGame(item as ModStoreGame);
-                    break;
+                DownloadModule(item as Module);
+            }
+            else if (item.Type == ModStoreResources.Game)
+            {
+                DownloadGame(item as ModStoreGame);
             }
         }
 
@@ -101,7 +100,7 @@ namespace com.clusterrr.hakchi_gui.module_library
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Critical error: " + ex.Message + ex.StackTrace, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(ModStoreResources.CriticalError, ex.Message + ex.StackTrace), Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             SaveConfig();
         }
@@ -180,7 +179,7 @@ namespace com.clusterrr.hakchi_gui.module_library
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Critical error: " + ex.Message + ex.StackTrace, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(ModStoreResources.CriticalError, ex.Message + ex.StackTrace), Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             SaveConfig();
         }

@@ -10,6 +10,7 @@ using com.clusterrr.hakchi_gui.module_library;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using com.clusterrr.hakchi_gui.Hmod.Controls;
+using com.clusterrr.hakchi_gui.Extensions.ModStore;
 
 namespace com.clusterrr.hakchi_gui
 {
@@ -25,9 +26,9 @@ namespace com.clusterrr.hakchi_gui
             config.parentForm = this;
             InitializeComponent();
             this.Icon = Resources.icon;
-            PoweredByLinkS.Text = "Powered By HakchiResources.com";
+            PoweredByLinkS.Text = ModStoreResources.PoweredByHakchiResourcesCom;
 
-            var welcomeURL = new Uri("https://hakchiresources.com/modstorewelcome/?mode=welcome");
+            var welcomeURL = new Uri(ModStoreResources.ModStoreWelcomeURL);
 
             if (Shared.isWindows)
             {
@@ -106,27 +107,27 @@ namespace com.clusterrr.hakchi_gui
         {
             updateModuleList();
             ModStore_Initialise(false);
-            Tasks.MessageForm.Show(this, this.Text, "Refreshed Mod Store");
+            Tasks.MessageForm.Show(this, this.Text, ModStoreResources.RefreshedModStore);
         }
 
         private void PoweredByLinkS_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.hakchiresources.com");
+            Process.Start(ModStoreResources.HakchiResourcesURL);
         }
 
         private void submitYourOwnModToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://hakchiresources.com/submit-mod/");
+            Process.Start(ModStoreResources.SubmitModURL);
         }
 
         private void discordLinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/ETe3ecx");
+            Process.Start(ModStoreResources.DiscordInvite);
         }
 
         private void visitWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.hakchiresources.com");
+            Process.Start(ModStoreResources.HakchiResourcesURL);
         }
 		
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -192,20 +193,20 @@ namespace com.clusterrr.hakchi_gui
                 config.AvailableItems.Clear();
                 foreach (var post in json["posts"])
                 {
-                    string type = "Module";
+                    string type = ModStoreResources.Module;
                     foreach (var tag in post["tags"])
                     {
                         if (tag["slug"].ToString().Equals("non_hmod"))
                         {
-                            type = "None";
+                            type = ModStoreResources.None;
                         }
                         else if (tag["slug"].ToString().Equals("game"))
                         {
-                            type = "Game";
+                            type = ModStoreResources.Game;
                             break;
                         }
                     }
-                    if (type.Equals("None"))
+                    if (type.Equals(ModStoreResources.None))
                         continue;
 
                     try
@@ -226,39 +227,38 @@ namespace com.clusterrr.hakchi_gui
 
                         //Set module type for RA cores
                         if (Categories.Contains("retroarch_cores"))
-                            type = "RACore";
+                            type = ModStoreResources.RACore;
                         
-                        switch (type)
+                        if(type == ModStoreResources.RACore)
                         {
-                            case "RACore":
-                                string System = "unknown";
-                                foreach (var tag in post["tags"])
-                                {
-                                    if (tag["slug"].ToString().StartsWith("ra_"))
-                                        System = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(tag["slug"].ToString().Substring(3).Replace('_', ' '));
-                                }
-                                var raModule = new RACoreModule { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path, Categories = Categories, System = System };
-                                if (raModule.SetModType())
-                                    config.AvailableItems.Add(raModule);
-                                break;
-
-                            case "Module":
-                                var module = new Module { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path, Categories = Categories };
-                                if (module.SetModType())
-                                    config.AvailableItems.Add(module);
-                                break;
-
-                            case "Game":
-                                config.AvailableItems.Add(new ModStoreGame { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path });
-                                break;
+                            string System = "unknown";
+                            foreach (var tag in post["tags"])
+                            {
+                                if (tag["slug"].ToString().StartsWith("ra_"))
+                                    System = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(tag["slug"].ToString().Substring(3).Replace('_', ' '));
+                            }
+                            var raModule = new RACoreModule { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path, Categories = Categories, System = System };
+                            if (raModule.SetModType())
+                                config.AvailableItems.Add(raModule);
                         }
+                        else if(type == ModStoreResources.Module)
+                        {
+                            var module = new Module { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path, Categories = Categories };
+                            if (module.SetModType())
+                                config.AvailableItems.Add(module);
+                        }
+                        else if(type == ModStoreResources.Game)
+                        {
+                            config.AvailableItems.Add(new ModStoreGame { Name = Name, Id = Id, Author = Author, Content = Content, Description = Description, Version = Version, Path = Path });
+                        }
+
                     }
                     catch { }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, "Critical error: " + ex.Message + ex.StackTrace, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, string.Format(ModStoreResources.CriticalError, ex.Message + ex.StackTrace), Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             config.LastUpdate = DateTime.Now;
@@ -285,14 +285,14 @@ namespace com.clusterrr.hakchi_gui
             }
             if (itemsToUpdate.Count != 0)
             {
-                var updateMsgBox = MessageBox.Show("Do you want to update all out of date mod store items?", "Update Items", MessageBoxButtons.YesNo);
+                var updateMsgBox = MessageBox.Show(ModStoreResources.UpdateAllOutOfDateModStoreItemsQ, ModStoreResources.UpdateItems, MessageBoxButtons.YesNo);
                 if (updateMsgBox == DialogResult.Yes)
                 {
                     for (int i = 0; i < itemsToUpdate.Count; ++i)
                     {
                         config.DownloadItem(itemsToUpdate[i]);
                     }
-                    MessageBox.Show(this, "Finished updating items.");
+                    MessageBox.Show(this, ModStoreResources.FinishedUpdatingItems);
                 }
             }
         }
@@ -300,7 +300,7 @@ namespace com.clusterrr.hakchi_gui
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
             string url = e.Url.ToString();
-            if (url == "about:blank" || url == "https://hakchiresources.com/modstorewelcome/?mode=welcome" || url.StartsWith("res:"))
+            if (url == "about:blank" || url == ModStoreResources.ModStoreWelcomeURL || url.StartsWith("res:"))
                 return;
 
             // cancel the current event
