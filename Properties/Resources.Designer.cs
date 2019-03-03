@@ -1610,7 +1610,7 @@ namespace com.clusterrr.hakchi_gui.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to body {
-        ///    font-family: Arial;
+        ///    font-family: Arial, Helvetica, sans-serif;
         ///    font-size: 12px;
         ///    margin: 1em;
         ///}
@@ -1621,25 +1621,25 @@ namespace com.clusterrr.hakchi_gui.Properties {
         ///}
         ///
         ///li {
-        ///    list-style: none;
-        ///    display: block;
         ///    background-repeat: no-repeat;
+        ///    display: inline-block;
+        ///    list-style: none;
+        ///    margin: 3px 0;
         ///    min-height: 16px;
         ///    padding: 0 0 0 20px;
-        ///    margin: 3px 0;
         ///    vertical-align: middle;
+        ///    width: 100%;
         ///}
         ///
         ///li:before {
         ///    content: &apos;&apos;;
         ///    display: inline-block;
         ///    height: 16px;
-        ///    width: 0;
         ///    vertical-align: middle;
+        ///    width: 0;
         ///}
         ///
-        ///li[type=&apos;folder&apos;] { 
-        ///    background-image: url(&apos;data:image/png;base [rest of string was truncated]&quot;;.
+        ///li[data-type=&apos;folder [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string folderListCss {
             get {
@@ -1939,6 +1939,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         internal static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HTML Files.
+        /// </summary>
+        internal static string HTMLFiles {
+            get {
+                return ResourceManager.GetString("HTMLFiles", resourceCulture);
             }
         }
         
@@ -3474,6 +3483,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Supported Files.
+        /// </summary>
+        internal static string SupportedFiles {
+            get {
+                return ResourceManager.GetString("SupportedFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have {0} of games already synchronized on your NES/SNES Mini (non separated for multiboot). Proceeding will erase those. Are you sure?.
         /// </summary>
         internal static string SyncMultibootWarning {
@@ -3895,6 +3913,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         internal static string Wow {
             get {
                 return ResourceManager.GetString("Wow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Files.
+        /// </summary>
+        internal static string XMLFiles {
+            get {
+                return ResourceManager.GetString("XMLFiles", resourceCulture);
             }
         }
         
