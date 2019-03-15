@@ -183,6 +183,9 @@
     <Compile Include="Files\Extensions.cs" />
     <Compile Include="Files\CheckFileType.cs" />
     <Compile Include="hakchi.cs" />
+    <Compile Include="HexTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Hmod\Controls\ReadmeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
