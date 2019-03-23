@@ -79,6 +79,8 @@
             this.uninstallModulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateModulesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modRepoStartSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.modRepoEndSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.manageModRepositoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.originalGamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.positionAtTheTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,6 +141,7 @@
             this.resetDefaultBootImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rebootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.switchRunningFirmwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formatSDCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripSeparator();
             this.prepareArtDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -239,8 +242,6 @@
             this.syncStructureForAllGamesCollectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gamesConsoleComboBox = new System.Windows.Forms.ComboBox();
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
-            this.modRepoEndSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.manageModRepositoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
@@ -581,6 +582,17 @@
             // 
             this.modRepoStartSeparator.Name = "modRepoStartSeparator";
             resources.ApplyResources(this.modRepoStartSeparator, "modRepoStartSeparator");
+            // 
+            // modRepoEndSeparator
+            // 
+            this.modRepoEndSeparator.Name = "modRepoEndSeparator";
+            resources.ApplyResources(this.modRepoEndSeparator, "modRepoEndSeparator");
+            // 
+            // manageModRepositoriesToolStripMenuItem
+            // 
+            this.manageModRepositoriesToolStripMenuItem.Name = "manageModRepositoriesToolStripMenuItem";
+            resources.ApplyResources(this.manageModRepositoriesToolStripMenuItem, "manageModRepositoriesToolStripMenuItem");
+            this.manageModRepositoriesToolStripMenuItem.Click += new System.EventHandler(this.manageModRepositoriesToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -965,6 +977,7 @@
             this.bootImageToolStripMenuItem,
             this.rebootToolStripMenuItem,
             this.switchRunningFirmwareToolStripMenuItem,
+            this.formatSDCardToolStripMenuItem,
             this.toolStripMenuItem18,
             this.prepareArtDirectoryToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
@@ -1048,6 +1061,12 @@
             this.switchRunningFirmwareToolStripMenuItem.Name = "switchRunningFirmwareToolStripMenuItem";
             resources.ApplyResources(this.switchRunningFirmwareToolStripMenuItem, "switchRunningFirmwareToolStripMenuItem");
             this.switchRunningFirmwareToolStripMenuItem.Click += new System.EventHandler(this.switchRunningFirmwareToolStripMenuItem_Click);
+            // 
+            // formatSDCardToolStripMenuItem
+            // 
+            this.formatSDCardToolStripMenuItem.Name = "formatSDCardToolStripMenuItem";
+            resources.ApplyResources(this.formatSDCardToolStripMenuItem, "formatSDCardToolStripMenuItem");
+            this.formatSDCardToolStripMenuItem.Click += new System.EventHandler(this.formatSDCardToolStripMenuItem_Click);
             // 
             // toolStripMenuItem18
             // 
@@ -1759,17 +1778,6 @@
             // 
             this.timerUpdate.Tick += new System.EventHandler(this.timerUpdate_Tick);
             // 
-            // modRepoEndSeparator
-            // 
-            this.modRepoEndSeparator.Name = "modRepoEndSeparator";
-            resources.ApplyResources(this.modRepoEndSeparator, "modRepoEndSeparator");
-            // 
-            // manageModRepositoriesToolStripMenuItem
-            // 
-            this.manageModRepositoriesToolStripMenuItem.Name = "manageModRepositoriesToolStripMenuItem";
-            resources.ApplyResources(this.manageModRepositoriesToolStripMenuItem, "manageModRepositoriesToolStripMenuItem");
-            this.manageModRepositoriesToolStripMenuItem.Click += new System.EventHandler(this.manageModRepositoriesToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -2025,6 +2033,7 @@
         private System.Windows.Forms.ToolStripSeparator modRepoEndSeparator;
         private System.Windows.Forms.ToolStripMenuItem manageModRepositoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveDmesgOutputToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formatSDCardToolStripMenuItem;
     }
 }
 
