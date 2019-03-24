@@ -97,6 +97,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adding hakchi MBR.
+        /// </summary>
+        internal static string AddingHakchiMBR {
+            get {
+                return ResourceManager.GetString("AddingHakchiMBR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All files.
         /// </summary>
         internal static string AllFiles {
@@ -551,6 +560,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clearing first 32MB of SD card.
+        /// </summary>
+        internal static string ClearingTheFirst32MBOfSDCard {
+            get {
+                return ResourceManager.GetString("ClearingTheFirst32MBOfSDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cn {
@@ -651,11 +669,47 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy files from NAND?.
+        /// </summary>
+        internal static string CopyFilesFromNandQ {
+            get {
+                return ResourceManager.GetString("CopyFilesFromNandQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to copy your saves and games from NAND to the SD card?.
+        /// </summary>
+        internal static string CopyFilesFromNandQ2 {
+            get {
+                return ResourceManager.GetString("CopyFilesFromNandQ2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copying games....
         /// </summary>
         internal static string CopyingGames {
             get {
                 return ResourceManager.GetString("CopyingGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copying hakchi to SD card.
+        /// </summary>
+        internal static string CopyingHakchiToSDCard {
+            get {
+                return ResourceManager.GetString("CopyingHakchiToSDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copying NAND data to SD card.
+        /// </summary>
+        internal static string CopyingNandDataToSDCard {
+            get {
+                return ResourceManager.GetString("CopyingNandDataToSDCard", resourceCulture);
             }
         }
         
@@ -1134,6 +1188,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         internal static string ExtraArgsTitle {
             get {
                 return ResourceManager.GetString("ExtraArgsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extracting hakchi to temporary folder.
+        /// </summary>
+        internal static string ExtractingHakchiToTemporaryFolder {
+            get {
+                return ResourceManager.GetString("ExtractingHakchiToTemporaryFolder", resourceCulture);
             }
         }
         
@@ -1777,20 +1840,20 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The classic will now reboot and continue the formatting process, this may take a few minutes depending on card speed..
-        /// </summary>
-        internal static string FormatSDReboot {
-            get {
-                return ResourceManager.GetString("FormatSDReboot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Formatting SD Card.
         /// </summary>
         internal static string FormattingSDCard {
             get {
                 return ResourceManager.GetString("FormattingSDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formatting SD card.
+        /// </summary>
+        internal static string FormattingTheSDCard {
+            get {
+                return ResourceManager.GetString("FormattingTheSDCard", resourceCulture);
             }
         }
         
@@ -2421,6 +2484,24 @@ namespace com.clusterrr.hakchi_gui.Properties {
         internal static string motdTemplateHTML {
             get {
                 return ResourceManager.GetString("motdTemplateHTML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mounting SD card.
+        /// </summary>
+        internal static string MountingSDCard {
+            get {
+                return ResourceManager.GetString("MountingSDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mounting SquashFS.
+        /// </summary>
+        internal static string MountingSquashFS {
+            get {
+                return ResourceManager.GetString("MountingSquashFS", resourceCulture);
             }
         }
         
@@ -3769,6 +3850,15 @@ namespace com.clusterrr.hakchi_gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unmounting SD card.
+        /// </summary>
+        internal static string UnmountingSDCard {
+            get {
+                return ResourceManager.GetString("UnmountingSDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unsaved Changes.
         /// </summary>
         internal static string UnsavedChanges {
@@ -3970,6 +4060,51 @@ namespace com.clusterrr.hakchi_gui.Properties {
         internal static string Wow {
             get {
                 return ResourceManager.GetString("Wow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Writing boot0.
+        /// </summary>
+        internal static string WritingBoot0 {
+            get {
+                return ResourceManager.GetString("WritingBoot0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Writing FAT filesystem.
+        /// </summary>
+        internal static string WritingFATFilesystem {
+            get {
+                return ResourceManager.GetString("WritingFATFilesystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Writing kernel.
+        /// </summary>
+        internal static string WritingKernel {
+            get {
+                return ResourceManager.GetString("WritingKernel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Writing SquashFS.
+        /// </summary>
+        internal static string WritingSquashFS {
+            get {
+                return ResourceManager.GetString("WritingSquashFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Writing uboot.
+        /// </summary>
+        internal static string WritingUboot {
+            get {
+                return ResourceManager.GetString("WritingUboot", resourceCulture);
             }
         }
         
